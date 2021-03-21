@@ -13,7 +13,7 @@ int* partition(int C[N]){
     int R=0;
     for (int i=0;i<N;i++){
         for (int j=R;j>=0;j--){
-            if (T[j]==true){
+            if (T[j]){
                 T[j+C[i]]=true;
                 if (j+C[i]>R){ R=j+C[i]; }
             }
@@ -27,7 +27,7 @@ int* partition(int C[N]){
 
 int main(){
 
-    int C[N] = {1,3,5,7,9};
+    int C[N] = {1,2,5,7,9};
     partition(C);
 
 }
