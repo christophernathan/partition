@@ -51,12 +51,30 @@ bool partition_duplicates(int* C, int* D){
     return (maxSum%2==0 && T[maxSum/2]);
 }
 
+int coin_combination(int* C, int query){
+    int T[query+1];
+    for (int i=0;i<=query;i++){ T[i]=0; }
+    T[0]=true;
+    int R=0;
+    for (int i=0;i<N;i++){
+        for (int j=0;j+C[i]<=query;j++){
+            T[j+C[i]] += T[j];
+        }
+    }
+
+    for (int i=0;i<=query;i++){
+        cout << i << ": " << T[i] << endl;
+    }
+    return T[query];
+}
+
 
 int main(){
 
     int C[N] = {1,2,5,7,9};
     int D[N] = {1,1,1,1,7};
-    partition_duplicates(C,D);
+    //partition_duplicates(C,D);
+    coin_combination(C,7);
 
 }
 
