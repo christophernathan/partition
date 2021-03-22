@@ -17,7 +17,7 @@ bool partition(int C[N]){ // original partition problem solution
             }
     }
 
-    for (int i=0;i<=maxSum;i++){
+    for (int i=0;i<=maxSum;i++){ // print integers between 0 and the max sum, along with whether a subset of array integers will sum to it
         cout << i << ": " << T[i] << endl;
     }
     return (maxSum%2==0 && T[maxSum/2]);
@@ -39,7 +39,7 @@ bool partition_duplicates(int* C, int* D){ // partition solution if there are du
             }
     }
 
-    for (int i=0;i<=maxSum;i++){
+    for (int i=0;i<=maxSum;i++){ // print integers between 0 and the max sum, along with whether a subset of array integers will sum to it
         cout << i << ": " << T[i] << endl;
     }
     return (maxSum%2==0 && T[maxSum/2]);
@@ -55,7 +55,7 @@ int coin_combination(int* C, int query){ // finds number of ways to make change 
         }
     }
 
-    for (int i=0;i<=query;i++){
+    for (int i=0;i<=query;i++){ // print number of ways to make change for each integer between 0 and the query integer
         cout << i << ": " << T[i] << endl;
     }
     return T[query];
