@@ -14,3 +14,4 @@ A final variation of the problem considers an unlimited number of each integer i
 
 ## Usage
 
+Clone the repo, `cd` into the partition directory, and run `g++ -o partition partition.cpp`. Then, run the executable with `./partition`.
